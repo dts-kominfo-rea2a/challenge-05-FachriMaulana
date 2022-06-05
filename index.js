@@ -6,14 +6,14 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "1. Nama"
 // "2. Nama"
 // ...
-const sorter = (dataArr, sortir) => {
-  const namas = sortir(dataArr);
-  const sortirNama = [];
-  for (let counter = 0; counter < namas.length; counter++) {
-    const UrutNama = namas[counter];
-    sortirNama.push(counter + 1 + "." + UrutNama);
+const sorter = (arrData, sortData) => {
+  let sortirNama = [];
+  let sortiran = sortData(arrData);
+  for (let counter = 0; counter < sortiran.length; counter++) {
+    const name = sortiran[counter];
+    sortirNama.push(counter + 1 + ". " + name);
   }
-  return namas;
+  return sortirNama;
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
